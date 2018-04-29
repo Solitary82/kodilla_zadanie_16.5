@@ -5,7 +5,7 @@ import Title from '../components/Title.js';
 import TodoList from '../components/TodoList.js';
 
 class App extends React.Component {
-	constructor(props) {
+	constructor (props) {
 		super(props);
 		this.state = {
 			data: [{
@@ -13,7 +13,7 @@ class App extends React.Component {
 				text: 'wash the dishes'
 			},
 			{
-				id: 2, 
+				id: 2,
 				text: 'go grocery shopping'
 			},
 			{
@@ -22,25 +22,25 @@ class App extends React.Component {
 			}]
 		};
 	}
-	addTodo(val) {
+	addTodo (val) {
 		const todo = {
 			text: val,
-			id: uuid.v4(),
+			id: uuid.v4()
 		};
 		const data = [...this.state.data, todo];
-		this.setState({data});
-	}
-    
-	removeTodo(id) {
-		const remainder = this.state.data.filter(todo => todo.id !== id);
-		this.setState({data: remainder});
+		this.setState({ data });
 	}
 
-	render() {
+	removeTodo (id) {
+		const remainder = this.state.data.filter(todo => todo.id !== id);
+		this.setState({ data: remainder });
+	}
+
+	render () {
 		return (
 			<div className={style.TodoApp}>
-				<Title title="Aplikacja" lenght={this.state.data.length}/>
-				<TodoList list={this.state.data}/>
+				<Title title="Aplikacja" lenght={this.state.data.length} />
+				<TodoList list={this.state.data} />
 			</div>
 		);
 	}

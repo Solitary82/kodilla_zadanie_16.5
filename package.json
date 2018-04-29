@@ -4,6 +4,7 @@
   "description": "Webpack - loadery",
   "main": "webpack.config.js",
   "dependencies": {
+    "eslint-config-standard-react": "^6.0.0",
     "uuid": "^3.2.1"
   },
   "devDependencies": {
@@ -13,7 +14,14 @@
     "babel-preset-react": "^6.24.1",
     "css-loader": "^0.28.11",
     "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-import": "^2.11.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-promise": "^3.7.0",
     "eslint-plugin-react": "^7.7.0",
+    "eslint-plugin-standard": "^3.1.0",
     "html-webpack-plugin": "^3.2.0",
     "npm-run-all": "^4.1.2",
     "nu-html-checker": "^0.1.0",
@@ -27,6 +35,7 @@
   "scripts": {
     "start": "webpack",
     "fix": "eslint --fix src",
+    "fix-config": "eslint --fix webpack.config.js",
     "test": "npm-run-all test:*",
     "test:js1": "eslint src",
     "test:js2": "eslint webpack.config.js",
